@@ -34,6 +34,7 @@ body {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4) ;
     font-size: 8vmin;
     color: rgb(153, 121, 15);
+    background-color: #ffffc7;
 }
 
 .reset {
@@ -43,4 +44,31 @@ body {
     height: 4vh;
     width: 8vh;
     border: none;
+}
+
+#new-btn {
+    color: white;
+    background-color: #191913;
+    border-radius: 1vh;
+    height: 6vh;
+    width: 8vh;
+    border: none;
+}
+
+#msg {
+    color: #ffffc7;
+    font-size: 12vmin;
+}
+
+.msg-container {
+    height : 110vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hidden {
+    display: none;
 }
