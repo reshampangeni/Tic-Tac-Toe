@@ -6,9 +6,14 @@ let msg = document.querySelector("#msg")
 let totalClicks = 0;
 //playerX , playerO
 let turnO = true;
+const clickSound = new Audio('sounds/click.mp3');
 
 const winPatterns = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
 
+function playsound(){
+    clickSound.currentTime = 0;
+    clickSound.play();
+}
 const resetGame = () => {
     turnO = true;
     totalClicks = 0;
@@ -29,6 +34,7 @@ boxes.forEach((box) => {
             box.style.color = "red";
         }
         box.disabled = true;
+        playsound();
 
         confWinner();
     })
